@@ -11,6 +11,7 @@ public class Main {
         char maxCh = Character.MIN_VALUE;
         char minCh = Character.MIN_VALUE;
         int min = Integer.MAX_VALUE;
+
         for (int i = 0; i < text.length(); i++) {
             ch = text.charAt(i);
             if (!map.containsKey(ch)) {
@@ -25,15 +26,11 @@ public class Main {
                 max = map.get(key);
                 maxCh = key;
             }
-        }
-
-        for (char key : map.keySet()) {
             if (map.get(key) < min) {
                 min = map.get(key);
                 minCh = key;
             }
         }
-
 
         System.out.println("Чаще всего встречалась буква \"" + maxCh + "\"");
         System.out.println("Реже всего встречалась буква \"" + minCh + "\"");
