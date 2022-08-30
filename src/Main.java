@@ -14,10 +14,12 @@ public class Main {
 
         for (int i = 0; i < text.length(); i++) {
             ch = text.charAt(i);
-            if (!map.containsKey(ch)) {
-                map.put(ch, 1);
-            } else {
-                map.put(ch, map.get(ch) + 1);
+            if (ch != ' ' && ch != ',' && ch != '.') {
+                if (!map.containsKey(ch)) {
+                    map.put(ch, 1);
+                } else {
+                    map.put(ch, map.get(ch) + 1);
+                }
             }
         }
 
